@@ -35,3 +35,9 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+  stage: Running python script
+  steps:
+  - script: python helloworld.py
+    displayName: 'Run helloworld.py'
+    

@@ -1,19 +1,19 @@
 trigger:
-  -main
+  - main
 
-  pool:
-    vmImage: 'ubuntu-latest'
+pool:
+  vmImage: 'ubuntu-latest'
 
-    stages:
-      - stage: Build
-        jobs:
-          - job: BuildJob
-            steps:
-              - script: echo Building...
-                displayName: 'Build Step'
-      - stage: Test
-        jobs:
-          - job: TestJob
-            steps:
-              - script: echo Testing...
-                displayName: 'Test Step'  
+stages:
+  - stage: Build
+    jobs:
+      - job: BuildJob
+        steps:
+          - script: echo Building...
+            displayName: 'Build Step'
+  - stage: Test
+    jobs:
+      - job: TestJob
+        steps:
+          - script: echo Testing...
+            displayName: 'Test Step'

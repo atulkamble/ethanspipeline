@@ -5,15 +5,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 stages:
-  - stage: Build
-    jobs:
-      - job: BuildJob
-        steps:
-          - script: echo Building...
-            displayName: 'Build Step'
-  - stage: Test
-    jobs:
-      - job: TestJob
-        steps:
-          - script: echo Testing...
-            displayName: 'Test Step'
+
+  - stage: FirstStage
+    script: echo "Starting pipeline..."
+    displayName: 'Initial Step'
+
+  

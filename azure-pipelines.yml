@@ -12,5 +12,4 @@ stages:
         steps:
           - script: echo "Starting pipeline..."
             displayName: 'Run Initial Script'
-
-  
+          - script: echo "Running piepline"
